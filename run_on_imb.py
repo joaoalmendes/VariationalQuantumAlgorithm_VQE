@@ -16,7 +16,7 @@ from qiskit_ibm_runtime import QiskitRuntimeService, Session
 from qiskit_ibm_runtime import EstimatorV2 as Estimator
 
 # To run on hardware, select the backend with the fewest number of jobs in the queue
-service = QiskitRuntimeService(channel="ibm_quantum", token="1eed55196e8d2e774cb9392e0d30a1c2541e55b15be9d77518f7b9375a5516c760d48d30d9e06d3fc2233b5d2bde5518f99b13a1afdb320208337194ae616ba6")
+service = QiskitRuntimeService(channel="ibm_quantum", token="YOUR TOKEN")
 backend = service.least_busy(operational=True, simulator=False)
 
 hamiltonian = SparsePauliOp.from_list(
